@@ -4,6 +4,7 @@ import { WalletMultiButton } from "@solana/wallet-adapter-react-ui";
 import SimpleDemo from "./components/Demo";
 import { BalanceComponent } from "./components/BalanceComponent";
 import { SendSol } from "./components/SendSol";
+import { PingComponent } from "./components/PingComponent";
 
 export default function Home() {
   const { publicKey } = useWallet();
@@ -11,6 +12,7 @@ export default function Home() {
     <div>
       <BalanceComponent />
       <SendSol />
+      <PingComponent />
     </div>
   );
 }
