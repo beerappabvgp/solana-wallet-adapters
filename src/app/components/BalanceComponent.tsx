@@ -10,7 +10,7 @@ export const BalanceComponent = () => {
     useEffect(() => {
         const updateBalance = async () => {
             if (!connection || !publicKey) {
-                console.error("Wallet not connected or connection unavailable");
+                console.log("Wallet not connected or connection unavailable");
             }
             try {
                 console.log("pub key:", publicKey);
@@ -21,7 +21,7 @@ export const BalanceComponent = () => {
                     throw new Error("Account not found ... ");  
                 }
             } catch (error) {
-                console.error("Error fetching balance:", error);
+                console.log("Error fetching balance:", error);
             }
         }
         updateBalance();
